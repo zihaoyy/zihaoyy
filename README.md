@@ -12,6 +12,6 @@
 <p align="center">
   <a href="https://idzh.cn">
     <img width="380em" src="https://github-readme-streak-stats.herokuapp.com?user=zihaoyy&hide_border=true&theme=vue-dark" />
-    <img width="380em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zihaoyy&layout=compact&hide_border=true&theme=vue-dark" />
+    <img width="325em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zihaoyy&layout=compact&hide_border=true&theme=vue-dark" />
   </a>
 </p>
