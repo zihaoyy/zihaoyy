@@ -2,22 +2,29 @@
   "version": 8,
   "name": "amap light version",
   "sources": {
-    "amap": {
-      "type": "vector",
-      "url": "https://vector.amap.com/vector/map/styles/normal/v1"
+    "amap-raster": {
+      "type": "raster",
+      "tiles": [
+        "https://wprd01.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7",
+        "https://wprd02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7",
+        "https://wprd03.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7",
+        "https://wprd04.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=7"
+      ],
+      "tileSize": 256
     }
   },
   "layers": [
-    {"id":"background","type":"background","paint":{"background-color":"#f5f5f5"}},
-    {"id":"land","type":"fill","source":"amap","source-layer":"land","paint":{"fill-color":"#f8f8f8"}},
-    {"id":"water","type":"fill","source":"amap","source-layer":"water","paint":{"fill-color":"#a8d0e8"}},
-    {"id":"district-border","type":"line","source":"amap","source-layer":"district_boundary","paint":{"line-color":"#cccccc","line-width":1}},
-    {"id":"city-border","type":"line","source":"amap","source-layer":"city_boundary","paint":{"line-color":"#888888","line-width":1.2}},
-    {"id":"province-border","type":"line","source":"amap","source-layer":"province_boundary","paint":{"line-color":"#444444","line-width":1.5}},
-    {"id":"road","type":"line","source":"amap","source-layer":"road","paint":{"line-color":"#ffffff","line-width":2}},
-    {"id":"road-outline","type":"line","source":"amap","source-layer":"road_outline","paint":{"line-color":"#dddddd","line-width":3}},
-    {"id":"province-label","type":"symbol","source":"amap","source-layer":"province_label","layout":{"text-field":"{name}","text-size":14},"paint":{"text-color":"#333333"}},
-    {"id":"city-label","type":"symbol","source":"amap","source-layer":"city_label","layout":{"text-field":"{name}","text-size":12},"paint":{"text-color":"#444444"}},
-    {"id":"district-label","type":"symbol","source":"amap","source-layer":"district_label","layout":{"text-field":"{name}","text-size":10},"paint":{"text-color":"#555555"}}
+    {
+      "id": "base-bg",
+      "type": "background",
+      "paint": {
+        "background-color": "#f4f6f8"
+      }
+    },
+    {
+      "id": "amap-layer",
+      "type": "raster",
+      "source": "amap-raster"
+    }
   ]
 }
