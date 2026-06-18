@@ -2,44 +2,44 @@
   "version": 8,
   "name": "amap dark version",
   "sources": {
-    "base_land_dark": {
+    "land_base": {
       "type": "raster",
       "tileSize": 256,
       "tiles": [
-        "https://wprd01.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8",
-        "https://wprd02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8",
-        "https://wprd03.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8",
-        "https://wprd04.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8"
+        "https://wprd01.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8&sty=darkblue",
+        "https://wprd02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8&sty=darkblue",
+        "https://wprd03.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8&sty=darkblue",
+        "https://wprd04.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8&sty=darkblue"
       ]
     },
-    "label_text_dark": {
+    "label_text": {
       "type": "raster",
       "tileSize": 256,
       "tiles": [
-        "https://wprd01.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8",
-        "https://wprd02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8",
-        "https://wprd03.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8",
-        "https://wprd04.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8"
+        "https://wprd01.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8&sty=darkblue",
+        "https://wprd02.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8&sty=darkblue",
+        "https://wprd03.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8&sty=darkblue",
+        "https://wprd04.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=1&style=8&sty=darkblue"
       ]
     }
   },
   "layers": [
     {
-      "id": "global_bg_dark",
+      "id": "ocean-bg-deep",
       "type": "background",
       "paint": {
-        "background-color": "#0c1420"
+        "background-color": "#040a18"
       }
     },
     {
-      "id": "land_fill_dark",
+      "id": "land-floor",
       "type": "raster",
-      "source": "base_land_dark"
+      "source": "land_base"
     },
     {
-      "id": "city_district_label_dark",
+      "id": "district-label-layer",
       "type": "raster",
-      "source": "label_text_dark"
+      "source": "label_text"
     }
   ]
 }
