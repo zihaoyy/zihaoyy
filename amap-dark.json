@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "amap dark version",
+  "sources": {
+    "amap": {
+      "type": "vector",
+      "url": "https://vector.amap.com/vector/map/styles/dark/v1"
+    }
+  },
+  "layers": [
+    {"id":"background","type":"background","paint":{"background-color":"#1a1a1a"}},
+    {"id":"land","type":"fill","source":"amap","source-layer":"land","paint":{"fill-color":"#222222"}},
+    {"id":"water","type":"fill","source":"amap","source-layer":"water","paint":{"fill-color":"#102838"}},
+    {"id":"district-border","type":"line","source":"amap","source-layer":"district_boundary","paint":{"line-color":"#444444","line-width":1}},
+    {"id":"city-border","type":"line","source":"amap","source-layer":"city_boundary","paint":{"line-color":"#666666","line-width":1.2}},
+    {"id":"province-border","type":"line","source":"amap","source-layer":"province_boundary","paint":{"line-color":"#999999","line-width":1.5}},
+    {"id":"road","type":"line","source":"amap","source-layer":"road","paint":{"line-color":"#333333","line-width":2}},
+    {"id":"road-outline","type":"line","source":"amap","source-layer":"road_outline","paint":{"line-color":"#111111","line-width":3}},
+    {"id":"province-label","type":"symbol","source":"amap","source-layer":"province_label","layout":{"text-field":"{name}","text-size":14},"paint":{"text-color":"#dddddd"}},
+    {"id":"city-label","type":"symbol","source":"amap","source-layer":"city_label","layout":{"text-field":"{name}","text-size":12},"paint":{"text-color":"#cccccc"}},
+    {"id":"district-label","type":"symbol","source":"amap","source-layer":"district_label","layout":{"text-field":"{name}","text-size":10},"paint":{"text-color":"#bbbbbb"}}
+  ]
+}
